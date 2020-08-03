@@ -10,8 +10,8 @@ set -eo pipefail
 
 echo "building list"
 
-# rm -rf ${CRAWLDIR} && mkdir -p ${CRAWLDIR}
-# cd ${CRAWLDIR} && wget -r -l 2 $ORIGIN
+rm -rf ${CRAWLDIR} && mkdir -p ${CRAWLDIR}
+cd ${CRAWLDIR} && wget -r -l 2 $ORIGIN
 rm -rf ${DOMAINS}
 find ${CRAWLDIR} -type f |\
     xargs grep -h -o '<a href=".*">' |\
@@ -50,7 +50,7 @@ cat << EOF >> ${OUTTMP}
             "notes" : "",
             "owner" : "me",
             "process" : "any",
-            "remote-domains": "randommadeupdomain213.com"
+            "remote-domains": "foxnews.com"
         }
 EOF
 
