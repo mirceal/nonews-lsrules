@@ -66745,13 +66745,6 @@
       "notes": "",
       "owner": "me",
       "process": "any",
-      "remote-domains": "google.com"
-    },
-    {
-      "action": "deny",
-      "notes": "",
-      "owner": "me",
-      "process": "any",
       "remote-domains": "gooieneemlander.nl"
     },
     {

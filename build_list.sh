@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 export SELFDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export CRAWLDIR=${SELFDIR}/"tmp"
+export ALLOWED=${SELFDIR}/"allowed.txt"
 export ORIGIN="http://www.abyznewslinks.com/"
 export DOMAINS=${CRAWLDIR}"/domains.txt"
 export OUT=${SELFDIR}/nonews.lsrules
@@ -20,7 +21,7 @@ find ${CRAWLDIR} -type f |\
     awk -F \/ '{l=split($3,a,"."); print (a[l-1]=="com"?a[l-2] OFS:X) a[l-1] OFS a[l]}' OFS="." |\
     grep -v "&#" |\
     grep -v "^\." |\
-    grep -v "abyznewslinks" |\
+    grep -v -f ${ALLOWED} |\
     sort -u >> ${DOMAINS}
 
 rm -rf ${OUTTMP}
