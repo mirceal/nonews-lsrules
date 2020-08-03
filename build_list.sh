@@ -20,6 +20,7 @@ find ${CRAWLDIR} -type f |\
     awk -F \/ '{l=split($3,a,"."); print (a[l-1]=="com"?a[l-2] OFS:X) a[l-1] OFS a[l]}' OFS="." |\
     grep -v "&#" |\
     grep -v "^\." |\
+    grep -v "abyznewslinks" |\
     sort -u >> ${DOMAINS}
 
 rm -rf ${OUTTMP}

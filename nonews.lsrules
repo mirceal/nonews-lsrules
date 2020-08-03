@@ -3213,13 +3213,6 @@
       "notes": "",
       "owner": "me",
       "process": "any",
-      "remote-domains": "abyznewslinks.com"
-    },
-    {
-      "action": "deny",
-      "notes": "",
-      "owner": "me",
-      "process": "any",
       "remote-domains": "ac.uk"
     },
     {
@@ -192997,7 +192990,7 @@
       "notes": "",
       "owner": "me",
       "process": "any",
-      "remote-domains": "randommadeupdomain213.com"
+      "remote-domains": "foxnews.com"
     }
   ]
 }
